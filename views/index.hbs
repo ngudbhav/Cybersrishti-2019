@@ -2,14 +2,54 @@
 <html>
 <head>
 	<title>Cybersrishti-2019</title>
-	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/mdb.min.css">
-	<script src="javascripts/jquery-3.3.1.min.js"></script>
-	<script src="javascripts/popper.min.js"></script>
-	<script src="javascripts/bootstrap.min.js"></script>
-	<script src="javascripts/mdb.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/mdb.min.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/loading-bar.css">
+	<script src="/javascripts/loading-bar.js"></script>
+	<script src="/javascripts/particles.js"></script>
+	<script>
+	particlesJS.load('particles-js', '/javascripts/particles.json', function(){
+			console.log('callback - particles.js config loaded');
+		}
+	);
+	</script>
+	<style>
+		html, body{
+			height: 100%;
+		}
+	</style>
 </head>
 <body>
-
+	<div class="preloader container-fluid" style="background-color: black;padding: 0;height: 100%;overflow-y:hidden;">
+		<center><div data-value="0" data-type="fill" data-img="/images/cyber_srishti_logo_copy.svg" class="ldBar auto" style="width: 50%;height:50%;" id="logo"></div></center>
+	</div>
+	<div class="fullBody container-fluid">
+		{{!-- <div id="particles-js" style="width: 100%;height: 100%;z-index: 6;"> --}}
+		{{!-- </div> --}}
+	</div>
+	{{!-- Audiowide Font --}}
+	{{!-- AIzaSyAnu2aaSXGSKGFat68JrW7oDNLVegDUvYI --}} {{!-- Google Maps API Key --}}
+	<script src="/javascripts/jquery-3.3.1.min.js"></script>
+	<script src="/javascripts/popper.min.js"></script>
+	<script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/mdb.min.js"></script>
+	<script>
+		var i = 38;
+		var bars = new ldBar("#logo");
+		var f = setInterval(function(){
+			if(i<70){
+				bars.set(i+=0.7);
+			}
+			else{
+				/*$(".preloader").addClass('animated fadeOut');
+				$(".fullBody").addClass('animated fadeIn');*/
+				clearInterval(f);
+			}
+		}, 100);
+		$(document).ready(function(e){
+			$(".preloader").addClass('animated fadeOut');
+			$(".fullBody").addClass('animated fadeIn');
+		});
+	</script>
 </body>
 </html>
