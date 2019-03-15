@@ -5,27 +5,78 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/mdb.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/loading-bar.css">
+	<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 	<script src="/javascripts/loading-bar.js"></script>
 	<script src="/javascripts/particles.js"></script>
 	<script>
-	particlesJS.load('particles-js', '/javascripts/particles.json', function(){
-			console.log('callback - particles.js config loaded');
-		}
-	);
+	
 	</script>
 	<style>
 		html, body{
 			height: 100%;
 		}
+		.nav-link{
+			color: white;
+			font-family: 'Audiowide', cursive;
+		}
+		.nav-link:hover{
+			color: white;
+		}
+		.animated{
+			display: none;
+		}
 	</style>
 </head>
 <body>
-	<div class="preloader container-fluid" style="background-color: black;padding: 0;height: 100%;overflow-y:hidden;">
+	<div class="preloader container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow-y:hidden;">
 		<center><div data-value="0" data-type="fill" data-img="/images/cyber_srishti_logo_copy.svg" class="ldBar auto" style="width: 50%;height:50%;" id="logo"></div></center>
 	</div>
-	<div class="fullBody container-fluid">
-		{{!-- <div id="particles-js" style="width: 100%;height: 100%;z-index: 6;"> --}}
-		{{!-- </div> --}}
+	<div class="fullBody container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow:hidden;display:none;">
+		<div class="row" style="height:100%;">
+			<div class="col-1" style="height:100%;">
+				<nav class="navbar bg-dark" style="height:100%;">
+					<ul class="navbar-nav" style="width:100%;">
+						<center>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fas fa-home fa-2x"></i>
+									<span class="animated">Home</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fas fa-user fa-2x"></i>
+									<span class="animated">About Us</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fas fa-calendar-week fa-2x"></i>
+									<span class="animated">Events</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fas fa-images fa-2x"></i>
+									<span class="animated">Gallery</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fas fa-users-cog fa-2x"></i>
+									<span class="animated">Our Team</span>
+								</a>
+							</li>
+						</center>
+					</ul>
+				</nav>
+			</div>
+			<div class="col-11" style="color:white;">
+				<div id="particles-js" style="width: 100%;height: 100%;z-index: 6;"></div>
+				<h1 style="font-weight:400;">Welcome to Cyber-Srishti-2019</h1>
+			</div>
+		</div>
 	</div>
 	{{!-- Audiowide Font --}}
 	{{!-- AIzaSyAnu2aaSXGSKGFat68JrW7oDNLVegDUvYI --}} {{!-- Google Maps API Key --}}
@@ -41,15 +92,30 @@
 				bars.set(i+=0.7);
 			}
 			else{
-				/*$(".preloader").addClass('animated fadeOut');
-				$(".fullBody").addClass('animated fadeIn');*/
+
 				clearInterval(f);
 			}
 		}, 100);
 		$(document).ready(function(e){
-			$(".preloader").addClass('animated fadeOut');
-			$(".fullBody").addClass('animated fadeIn');
+			loadComplete();
 		});
+		$(".nav-item").hover(function() {
+			var s = $(this).children('a').children('span');
+			s.show();
+		}, function() {
+			var s = $(this).children('a').children('span');
+			s.hide();
+		});
+		function loadComplete(){
+			$(".preloader").addClass('animated fadeOut');
+			$(".preloader").css('display', 'none');
+			$(".fullBody").css('display', 'block');
+			$(".fullBody").addClass('animated fadeIn');
+			particlesJS.load('particles-js', '/javascripts/particles.json', function(){
+					console.log('callback - particles.js config loaded');
+				}
+			);
+		}
 	</script>
 </body>
 </html>
