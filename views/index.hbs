@@ -16,7 +16,7 @@
 	
 	</script>
 	<style>
-		html, body{
+		html, body, .container{
 			height: 100%;
 			font-family: 'Audiowide', cursive;
 		}
@@ -29,11 +29,25 @@
 		.animated{
 			display: none;
 		}
+		#teamPics img{
+			width: 25%;
+			border-radius: 15px;
+			filter: grayscale(100%);
+		}
+		#teamPics img:hover{
+			box-shadow: 0 10px 40px 0 rgba(0,0,0,0.5);
+			filter: grayscale(0%);
+			transition: 0.8s ease;
+			transform: scale(1.1);
+			/* transition: zoom-in-out; */
+		}
 	</style>
 </head>
 <body>
 	<div class="preloader container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow-y:hidden;">
-		<center><div data-value="0" data-type="fill" data-img="/images/cyber_srishti_logo_cut.svg" class="ldBar auto" style="width: 50%;height:50%;" id="logo"></div></center>
+		<center>
+			<div data-value="0" data-type="fill" data-img="/images/cyber_srishti_logo_cut.svg" class="ldBar auto" style="width: 50%;height:50%;" id="logo"></div>
+		</center>
 	</div>
 	<div class="fullBody container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow-x:hidden;display:none;">
 		<div class="row" style="height:100%;">
@@ -48,9 +62,9 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="#" onclick="about();">
 									<i class="fas fa-user fa-2x"></i>
-									<span class="animated fadeIn">About Us</span>
+									<span class="animated fadeIn">About</span>
 								</a>
 							</li>
 							<li class="nav-item">
@@ -66,9 +80,9 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#" onclick="team();">
-									<i class="fas fa-users-cog fa-2x"></i>
-									<span class="animated fadeIn">Our Team</span>
+								<a class="nav-link" href="#" onclick="contact();">
+									<i class="fas fa-comment fa-2x"></i>
+									<span class="animated fadeIn">Contact</span>
 								</a>
 							</li>
 						</center>
@@ -105,21 +119,20 @@
 					</div>
 					<br><br>
 					<div class="row">
-						<div class="col-12">
-							<center>
-								
-							</center>
-						</div>
-					</div>
-					<br><br>
-					<div class="row">
 						<div class="col-4 offset-2">
 							<div class="card">
 								<div class="view overlay">
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title"><a>Director</a></h4>
-									<p class="card-text white-text mb-4" style="font-family: Calibri;text-align:justify;text-justify:inter-word;">
+									<div class="row">
+										<div class="col-8">
+											<h4 class="card-title"><a>Director</a></h4>
+										</div>
+										<div class="col-4">
+											<img src="/images/atul_dp.jpeg" alt="" class="img-fluid">
+										</div>
+									</div>
+									<p class="card-text white-text mb-4" style="font-family: 'Open Sans',sans-serif;text-align:justify;text-justify:inter-word;font-size: 14px;font-weight:300;">
 										Greetings!<br> 
 										With immense pleasure and joy, I'm happy to announce the sixth edition of Cybersrishti and warm heartedly welcome you all to this grand two day technical festival of Jaypee Institute of Information Technology, Noida-62.<br>
 										Me along with my team are trying our level best to take this fest to new heights and are thus hoping a huge participation. For the same, I call upon all the young minds, full of talent to come and participate and thus enhance the value of this event.This fest aims at overall development of an individual by intermixing of technical and non technical events.<br>
@@ -129,6 +142,11 @@
 									Director<br>
 									Cyber Srishti 2019
 									</p>
+									<div class="row">
+										<div class="col-2 offset-10">
+											<img src="/images/atul_sign.jpeg" alt="" class="img-fluid">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -137,8 +155,15 @@
 								<div class="view overlay">
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title"><a>Faculty-Head</a></h4>
-									<p class="card-text white-text mb-4" style="font-family: Calibri;text-align:justify;text-justify:inter-word;">
+									<div class="row">
+										<div class="col-9">
+											<h4 class="card-title"><a>Faculty-Head</a></h4>
+										</div>
+										<div class="col-3">
+											<img src="/images/mkt_dp.jpeg" alt="" class="img-fluid">
+										</div>
+									</div>
+									<p class="card-text white-text mb-4" style="font-family: 'Open Sans',sans-serif;text-align:justify;text-justify:inter-word;font-size: 14px;font-weight:300;">
 										Hello!<br>
 										I, Manish Kumar Thakur, Faculty Head, Cyber Srishti, on behalf of the entire team am immense proud to announce that the Annual Technical fest of JIIT is going to be held on 20th and 21st of April, 2019.<br>
 										We were delighted with the response of Cyber Srishti 2018. Participation of students in huge numbers from various colleges across NCR inspires us to bring you with a grander version of this fest. We hope that you will enthusiastically participate this year as well. The team is putting in its heart and soul in making the event better every year.<br>This year as well, we bring to you a plethora of technical events along with other fun filled events, with amazing cash prizes and certificates.
@@ -147,10 +172,197 @@
 									Faculty-Head<br>
 									Cyber Srishti 2019
 									</p>
+									<div class="row">
+										<div class="col-3 offset-9">
+											<img src="/images/mkt_sign.jpeg" alt="" class="img-fluid">
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<br><br>
+				</div>
+				<div class="about main-page animated fadeInLeft h-100">
+					<div class="row">
+						<div class="col-11 offset-1">
+							<nav class="navbar navbar-expand-lg bg-dark navbar-dark scrolling navbar" id="aboutNav">
+								<a class="navbar-brand actives" href="#showabout">About</a>
+								<div class="collapse navbar-collapse" id="navbarSupportedContent">
+									<ul class="navbar-nav mr-auto"></ul>
+									<ul class="navbar-nav" style="margin-right: 3%;">
+										<li class="nav-item ">
+											<a class="nav-link" href="#sponsors">Sponsors</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="#team">Our Team</a>
+										</li>
+										<li class="nav-item ">
+											<a class="nav-link" href="#locate">Locate Us</a>
+										</li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+					</div>
+					{{!-- <div data-spy="scroll" data-target="#aboutNav" data-offset="0" class="container">
+					 --}}<div class="row">
+							<div class="col-11 offset-1">
+								<div id="showabout">
+									<br>
+									<div class="card" style="font-size: 14px;font-weight:300;">
+										<div class="view overlay">
+										</div>
+										<div class="card-body elegant-color white-text rounded-bottom">
+											<h4 class="card-title" style="text-align:center;"><a>About us!</a></h4>
+											<br>
+											<p class="card-text white-text mb-4" style="font-family: 'Open Sans',sans-serif;text-align:center;font-size: 14px;font-weight:300;">With the motto of stimulating technology, scientific thinking and innovation,<br>Jaypee Institute of Information Technology<br>presents the 6th edition of its annual technical festival- CYBER SRISHTI.<br> Hence, with an overwhelming student participation<br> and a reach of over 250 colleges,<br> Cyber Srishti has become one of the most established technical festival<br> organised among Delhi-NCR colleges.<br> Cyber Srishti thus endeavours to provide youth<br> with a platform to showcase their talents<br> and skills in cut-throat competitions,<br> displaying pioneering technology and research<br> from all over the country<br> and to interact with renowned personalities.
+											</p>
+										</div>
+									</div>
+								</div>
+								{{!-- <div id="sponsors">
+									<br>
+									<center>
+										<h2>
+											<div class="heading">Our Sponsors</div>
+										</h2>
+									</center>
+									<br>
+									<div class="container">
+										<div class="row">
+											<div class="col-md-6 text-md-left mt-xl-5 mt-5 code code--small code--left">
+												<img src="/images/Sponsors/ATKT-eng.png" class="rounded float-right mr-3 wow fadeInLeft" alt="thumbnail" style="height: 150px; width: 150px;" data-wow-delay="0.1s">
+											</div>
+											<div class="col-md-6 text-md-left mt-xl-5 mt-5" data-aos="fade-right">
+												<img src="/images/Sponsors/download(1).png" class="rounded float-left ml-3" alt="thumbnail" style="height: 150px; width: 150px;">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-5 mt-xl-5 mt-5" data-aos = "fade-left">
+												<img src="/images/Sponsors/DUExpress_logo.png" alt="thumbnail" style="height: 150px; width: 150px;" class="rounded float-right">
+											</div>
+											<div class="col-md-4 text-md-left mt-xl-5 mt-5 " data-aos = "fade-right">
+												<img src="/images/Sponsors/FB_IMG_1523620365112.jpg" alt="thumbnail" style="height: 150px; width: 150px;" class="rounded float-right ml-8">
+											</div>
+										</div>
+										<div class="row">
+											<div data-aos = "fade-left" class="col-md-4 text-md-left mt-xl-5 mt-5 ">
+												<img src="/images/Sponsors/IMG_1742.jpeg"  class="rounded float-right mr-7" alt="thumbnail" style="height: 150px; width: 150px;">
+											</div>
+											<div class="col-md-6 text-md-left mt-xl-5 mt-5 " data-aos = "fade-right">
+												<img src="/images/Sponsors/IMG_8163.jpeg" alt="thumbnail" style="height: 150px; width: 150px;" class="rounded float-right ml-7">
+											</div>
+										</div>
+										<div class="row">
+											<div data-aos = "fade-left" class="col-md-3 text-md-left mt-xl-5 mt-5">
+												<img src="/images/Sponsors/IMG-20190321-WA0023.jpg" alt="thumbnail" style="height: 150px; width: 150px;" class="rounded float-right mr-3">
+											</div>
+											<div data-aos = "fade-right" class="col-md-8 text-md-left mt-xl-5 mt-5 ">
+												<img src="/images/Sponsors/IMG-20190321-WA0024.jpg" alt="thumbnail" style="height: 150px; width: 150px;" class="rounded float-right ml-3">
+											</div>
+										</div>
+									</div>
+								</div> --}}
+								<br><br>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-11 offset-1">
+								<div id="team">
+									<div class="card" style="font-size: 14px;font-weight:300;">
+										<div class="view overlay">
+										</div>
+										<div class="card-body elegant-color white-text rounded-bottom" id="teamPics">
+											<h4 class="card-title" style="text-align:center;"><a>Team Members</a></h4>
+											<br>
+											<div class="row">
+												<div class="col-3">
+													<center>
+														<img src="/images/team/mkt.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+													</center>
+												</div>
+												<div class="col-3">
+													<center>
+														<img src="/images/team/tkt.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+													</center>
+												</div>
+												<div class="col-3">
+													<center>
+														<img src="/images/team/sa.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+													</center>
+												</div>
+												<div class="col-3">
+													<center>
+														<img src="/images/team/am.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/1.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><hr><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/2.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/3.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/4.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/5.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/6.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/7.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/8.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
+														<img src="/images/team/9.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/10.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<br><br>
+							</div>
+						</div>
+						<div class="row h-50">
+							<div class="col-11 offset-1 h-100">
+								<div id="locate" style="height:100%;" class="container-fluid">
+									<br><br>
+								</div>
+							</div>
+						</div>
 					<br><br>
 				</div>
 				<div class="gallery main-page animated fadeInLeft">
@@ -165,7 +377,7 @@
 					<br>
 					<div class="row">
 						<div class="col-2 offset-3">
-							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#gal2018" aria-expanded="false" aria-controls="gal2018">
+							<button class="btn btn-deep-orange" type="button" data-toggle="collapse" data-target="#gal2018" aria-expanded="false" aria-controls="gal2018">
 								2018
 							</button>
 						</div>
@@ -182,7 +394,7 @@
 							</button>
 						</div>
 						<div class="col-2">
-							<button class="btn btn-deep-orange" type="button" data-toggle="collapse" data-target="#collapseExample"
+							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
 							aria-expanded="false" aria-controls="collapseExample">
 								2015	
 							</button>
@@ -384,13 +596,13 @@
 					</div>
 					<br><br>
 				</div>
-				<div class="team main-page animated fadeInLeft">
+				<div class="contact main-page animated fadeInLeft">
 					<br>
 					<div class="row">
 						<div class="col-12">
 							<center>
 								<h1>
-									Our Team
+									Contact us!
 								</h1>
 							</center>
 						</div>
@@ -412,6 +624,92 @@
 	<script src="/javascripts/bootstrap.min.js"></script>
 	<script src="/javascripts/mdb.min.js"></script>
 	<script>
+		function initMap(){
+			var map = new google.maps.Map(document.getElementById('locate'), {center: {lat: 28.630044, lng: 77.372082},
+				zoom: 18,
+				styles: [
+					{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+					{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+					{elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+					{
+						featureType: 'administrative.locality',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#d59563'}]
+					},
+					{
+						featureType: 'poi',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#d59563'}]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'geometry',
+						stylers: [{color: '#263c3f'}]
+					},
+					{
+						featureType: 'poi.park',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#6b9a76'}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry',
+						stylers: [{color: '#38414e'}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'geometry.stroke',
+						stylers: [{color: '#212a37'}]
+					},
+					{
+						featureType: 'road',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#9ca5b3'}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry',
+						stylers: [{color: '#746855'}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'geometry.stroke',
+						stylers: [{color: '#1f2835'}]
+					},
+					{
+						featureType: 'road.highway',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#f3d19c'}]
+					},
+					{
+						featureType: 'transit',
+						elementType: 'geometry',
+						stylers: [{color: '#2f3948'}]
+					},
+					{
+						featureType: 'transit.station',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#d59563'}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'geometry',
+						stylers: [{color: '#17263c'}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.fill',
+						stylers: [{color: '#515c6d'}]
+					},
+					{
+						featureType: 'water',
+						elementType: 'labels.text.stroke',
+						stylers: [{color: '#17263c'}]
+					}
+				]
+			});
+			var marker = new google.maps.Marker({position: {lat: 28.630044, lng: 77.372082}, map: map});
+		}
 		var i = 0;
 		var bars = new ldBar("#logo");
 		var f = setInterval(function(){
@@ -419,7 +717,7 @@
 				bars.set(i+=2);
 			}
 			else{
-
+					//loadComplete();
 				clearInterval(f);
 			}
 		}, 100);
@@ -463,9 +761,14 @@
 			$(".gallery").show();
 			$("#gal2018").collapse('show');
 		}
-		function team(){
+		function about(){
 			reShow();
-			$(".team").show();
+			$(".about").show();
+			//new WOW().init();
+		}
+		function contact(){
+			reShow();
+			$(".contact").show();
 		}
 		function events(){
 			reShow();
@@ -499,5 +802,6 @@
 			}
 		}, 1000);
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnu2aaSXGSKGFat68JrW7oDNLVegDUvYI&callback=initMap"></script>
 </body>
 </html>
