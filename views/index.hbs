@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Cybersrishti-2019</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/mdb.min.css">
 	<link rel="stylesheet" type="text/css" href="/stylesheets/loading-bar.css">
@@ -26,6 +27,12 @@
 		.nav-link:hover{
 			color: white;
 		}
+		#d{
+			float: right;
+		}
+		#h{
+			float: right;
+		}
 		.animated{
 			display: none;
 		}
@@ -34,12 +41,63 @@
 			border-radius: 15px;
 			filter: grayscale(100%);
 		}
+		.mpic{
+			width: 50% !important;
+		}
 		#teamPics img:hover{
 			box-shadow: 0 10px 40px 0 rgba(0,0,0,0.5);
 			filter: grayscale(0%);
 			transition: 0.8s ease;
 			transform: scale(1.1);
-			/* transition: zoom-in-out; */
+		}
+		#navMenu{
+			display: block;
+		}
+		#navMenuButton{
+			display: none;
+		}
+		.logoimg{
+			float: right;
+			width: 13%;
+		}
+		.time{
+			text-align: ;
+		}
+		@media screen and (max-width: 576px) {
+			#teamPics img{
+				width: 100%;
+			}
+			.mpic{
+				width: 100% !important;
+			}
+			.logoimg{
+				float: none !important;
+				width: 16%;
+			}
+			#d{
+				float: none;
+			}
+			#h{
+				float: none;
+			}
+			.time{
+				text-align: center;
+			}
+		}
+		@media screen and (max-width: 1200px) {
+			#navMenu{
+				display: none;
+			}
+			#navMenuButton{
+				display: block;
+			}
+			.navItem{
+				display: block;
+			}
+			.logoimg{
+				float: right;
+				width: 16%;
+			}
 		}
 	</style>
 </head>
@@ -50,39 +108,58 @@
 		</center>
 	</div>
 	<div class="fullBody container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow-x:hidden;display:none;">
+		<div class="row" id="navMenuButton">
+			<div class="col-2" style="position:absolute;cursor:pointer;z-index:4;" onclick="toggleMenu();">
+				<center><div style="color:white;margin-top:5vh;">
+					<i class="fas fa-ellipsis-v fa-2x"></i>
+				</div></center>
+			</div>
+		</div>
 		<div class="row" style="height:100%;">
-			<div class="col-1" style="height:100%;position:fixed;z-index:3;">
+			<div class="col-xl-1 animated slideInLeft" style="height:100%;position:fixed;z-index:3;" id="navMenu">
 				<nav class="navbar bg-dark" style="height:100%;">
 					<ul class="navbar-nav" style="width:100%;">
 						<center>
 							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="home();">
 									<i class="fas fa-home fa-2x"></i>
-									<span class="animated fadeIn">Home</span>
+									<span class="animated fadeIn navItem">Home</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="about();">
 									<i class="fas fa-user fa-2x"></i>
-									<span class="animated fadeIn">About</span>
+									<span class="animated fadeIn navItem">About</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="events();">
 									<i class="fas fa-calendar-week fa-2x"></i>
-									<span class="animated fadeIn">Events</span>
+									<span class="animated fadeIn navItem">Events</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="gallery();">
 									<i class="fas fa-images fa-2x"></i>
-									<span class="animated fadeIn">Gallery</span>
+									<span class="animated fadeIn navItem">Gallery</span>
 								</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="contact();">
 									<i class="fas fa-comment fa-2x"></i>
-									<span class="animated fadeIn">Contact</span>
+									<span class="animated fadeIn navItem">Contact</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fab fa-android fa-2x"></i>
+									<span class="animated fadeIn navItem">Install</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<i class="fab fa-apple fa-2x"></i>
+									<span class="animated fadeIn navItem">Install</span>
 								</a>
 							</li>
 						</center>
@@ -96,30 +173,41 @@
 					<br>
 					<div class="row">
 						<div class="col-12">
-							<center>
-								<h1>Cybersrishti</h1>
-								<h4>Welcomes You</h4>
-							</center>
+							<div class="row">
+								<div class="col-sm-5">
+									<center>
+										<img src="/images/cyber.png" class="logoimg">	
+									</center>
+								</div>
+								<div class="col-sm-6 time">
+									<h1>Cybersrishti</h1>
+									<h4>Welcomes You</h4>
+								</div>
+							</div>
 						</div>
 					</div>
 					<br>
 					<div class="row">
 						<div class="col-12">
-							<center>
-								<h4>Awesomeness beginning in:</h4>
-								<br>
-								<span>
-									<button type="button" class="btn btn-elegant btn-lg" id="d">Loading...</button>
-									<button type="button" class="btn btn-elegant btn-lg" id="h">Loading...</button>
+							<center><h4>Awesomeness beginning in:</h4></center>
+							<br>
+							<div class="row time">
+								<div class="col-sm-6">
+									<div>
+										<button type="button" class="btn btn-elegant btn-lg" id="h">Loading...</button>
+										<button type="button" class="btn btn-elegant btn-lg" id="d">Loading...</button>
+									</div>
+								</div>
+								<div class="col-sm-6">
 									<button type="button" class="btn btn-elegant btn-lg" id="m">Loading...</button>
 									<button type="button" class="btn btn-elegant btn-lg" id="s">Loading...</button>
-								</span>
-							</center>
+								</div>
+							</div>
 						</div>
 					</div>
 					<br><br>
 					<div class="row">
-						<div class="col-4 offset-2">
+						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-2 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 								</div>
@@ -145,7 +233,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-4">
+						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 								</div>
@@ -269,26 +357,26 @@
 											<div class="row">
 												<div class="col-3">
 													<center>
-														<img src="/images/team/mkt.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+														<img src="/images/team/mkt.jpg" alt="" class="img-fluid mpic" style="filter:grayscale(0%);">
 													</center>
 												</div>
 												<div class="col-3">
 													<center>
-														<img src="/images/team/tkt.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+														<img src="/images/team/tkt.jpg" alt="" class="img-fluid mpic" style="filter:grayscale(0%);">
 													</center>
 												</div>
 												<div class="col-3">
 													<center>
-														<img src="/images/team/sa.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+														<img src="/images/team/sa.jpg" alt="" class="img-fluid mpic" style="filter:grayscale(0%);">
 													</center>
 												</div>
 												<div class="col-3">
 													<center>
-														<img src="/images/team/am.jpg" alt="" class="img-fluid" style="width:50%;filter:grayscale(0%);">
+														<img src="/images/team/am.jpg" alt="" class="img-fluid mpic" style="filter:grayscale(0%);">
 													</center>
 												</div>
 											</div>
-											<br><br>
+											<br><hr><br>
 											<div class="row">
 												<div class="col-12">
 													<center>
@@ -296,7 +384,7 @@
 													</center>
 												</div>
 											</div>
-											<br><hr><br>
+											<br><br>
 											<div class="row">
 												<div class="col-12">
 													<center>
@@ -346,7 +434,7 @@
 								<br><br>
 							</div>
 						</div>
-						<div class="row h-50">
+						<div class="row" style="height:25%;">
 							<div class="col-11 offset-1 h-100">
 								<div id="locate" style="height:100%;" class="container-fluid">
 									<br><br>
@@ -366,24 +454,24 @@
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-2 offset-3">
+						<div class="col-sm-2 offset-sm-3 col-3">
 							<button class="btn btn-deep-orange" type="button" data-toggle="collapse" data-target="#gal2018" aria-expanded="false" aria-controls="gal2018">
 								2018
 							</button>
 						</div>
-						<div class="col-2">
+						<div class="col-sm-2 col-3">
 							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
 							aria-expanded="false" aria-controls="collapseExample">
 								2017
 							</button>
 						</div>
-						<div class="col-2">
+						<div class="col-sm-2 col-3">
 							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
 							aria-expanded="false" aria-controls="collapseExample">
 								2016
 							</button>
 						</div>
-						<div class="col-2">
+						<div class="col-sm-2 col-3">
 							<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
 							aria-expanded="false" aria-controls="collapseExample">
 								2015	
@@ -433,7 +521,7 @@
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-3 offset-2">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -444,12 +532,12 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -460,12 +548,12 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -476,58 +564,7 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<br><br>
-					<div class="row">
-						<div class="col-3 offset-2">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-3">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-3">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
@@ -535,7 +572,7 @@
 					</div>
 					<br><br>
 					<div class="row">
-						<div class="col-3 offset-2">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -546,12 +583,12 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -562,12 +599,12 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
-						<div class="col-3">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -578,7 +615,58 @@
 								<div class="card-body elegant-color white-text rounded-bottom">
 									<h4 class="card-title">Event Name</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
 									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
@@ -608,15 +696,29 @@
 			</div>
 		</div>
 	</div>
-	{{!-- AIzaSyAnu2aaSXGSKGFat68JrW7oDNLVegDUvYI --}} {{!-- Google Maps API Key --}}
 	<script src="/javascripts/jquery-3.3.1.min.js"></script>
 	<script src="/javascripts/popper.min.js"></script>
 	<script src="/javascripts/bootstrap.min.js"></script>
 	<script src="/javascripts/mdb.min.js"></script>
 	<script>
+		function toggleMenu(){
+			if($('#navMenuButton').css('display') == 'block'){
+				if($('#navMenu').css('display') == 'block'){
+					$('#navMenu').css('display', 'none');
+					$(".main-page").show();
+				}
+				else if($('#navMenu').css('display') == 'none'){
+					$('#navMenu').css('display', 'block');
+					$(".main-page").hide();
+				}
+			}
+		}
+	</script>
+	<script>
 		function initMap(){
 			var map = new google.maps.Map(document.getElementById('locate'), {center: {lat: 28.630044, lng: 77.372082},
 				zoom: 18,
+				fullscreenControl: false,
 				styles: [
 					{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
 					{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -727,23 +829,24 @@
 			$(".fullBody").css('display', 'block');
 			$(".fullBody").addClass('animated fadeIn');
 			particlesJS.load('particles-js', '/javascripts/particles.json', function(){
-					console.log('callback - particles.js config loaded');
 				}
 			);
-			home();
+			$(".main-page").hide();
+			$(".home").show();
 		}
 	</script>
 	<script>
 		var modal = new tingle.modal({
 			footer: false,
 			stickyFooter: false,
-			closeMethods: ['button', 'escape'],
+			closeMethods: ['button', 'escape', 'overlay'],
 			beforeClose: function() {
 				return true;
 			}
 		});
-		modal.setContent('<h1>Coming Soon!</h1><br><h5>Press esc to buzz this off your sight!</h5>');
+		modal.setContent('<br><h1>Coming Soon!</h1><br><h5>Press esc to buzz this off your sight!</h5>');
 		function reShow(){
+			toggleMenu();
 			$(".main-page").hide();
 		}
 		function gallery(){
