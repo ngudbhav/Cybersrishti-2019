@@ -13,93 +13,7 @@
 	<script src="/javascripts/tingle.js"></script>
 	<script src="/javascripts/loading-bar.js"></script>
 	<script src="/javascripts/particles.js"></script>
-	<script>
-	
-	</script>
-	<style>
-		html, body, .container{
-			height: 100%;
-			font-family: 'Audiowide', cursive;
-		}
-		.nav-link{
-			color: white;
-		}
-		.nav-link:hover{
-			color: white;
-		}
-		#d{
-			float: right;
-		}
-		#h{
-			float: right;
-		}
-		.animated{
-			display: none;
-		}
-		#teamPics img{
-			width: 25%;
-			border-radius: 15px;
-			filter: grayscale(100%);
-		}
-		.mpic{
-			width: 50% !important;
-		}
-		#teamPics img:hover{
-			box-shadow: 0 10px 40px 0 rgba(0,0,0,0.5);
-			filter: grayscale(0%);
-			transition: 0.8s ease;
-			transform: scale(1.1);
-		}
-		#navMenu{
-			display: block;
-		}
-		#navMenuButton{
-			display: none;
-		}
-		.logoimg{
-			float: right;
-			width: 13%;
-		}
-		.time{
-			text-align: ;
-		}
-		@media screen and (max-width: 576px) {
-			#teamPics img{
-				width: 100%;
-			}
-			.mpic{
-				width: 100% !important;
-			}
-			.logoimg{
-				float: none !important;
-				width: 16%;
-			}
-			#d{
-				float: none;
-			}
-			#h{
-				float: none;
-			}
-			.time{
-				text-align: center;
-			}
-		}
-		@media screen and (max-width: 1200px) {
-			#navMenu{
-				display: none;
-			}
-			#navMenuButton{
-				display: block;
-			}
-			.navItem{
-				display: block;
-			}
-			.logoimg{
-				float: right;
-				width: 16%;
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/index.css">
 </head>
 <body>
 	<div class="preloader container-fluid" style="background-color: #252627;padding: 0;height: 100%;overflow-y:hidden;">
@@ -193,9 +107,9 @@
 							<br>
 							<div class="row time">
 								<div class="col-sm-6">
-									<div>
-										<button type="button" class="btn btn-elegant btn-lg" id="h">Loading...</button>
+									<div id="dh">
 										<button type="button" class="btn btn-elegant btn-lg" id="d">Loading...</button>
+										<button type="button" class="btn btn-elegant btn-lg" id="h">Loading...</button>
 									</div>
 								</div>
 								<div class="col-sm-6">
@@ -207,7 +121,32 @@
 					</div>
 					<br><br>
 					<div class="row">
-						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-2 col-10 offset-1">
+						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-2 col-10 offset-1 mb-3">
+							<div class="card">
+								<div class="view overlay">
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<div class="row">
+										<div class="col-9">
+											<h4 class="card-title"><a>Faculty-Head</a></h4>
+										</div>
+										<div class="col-3">
+											<img src="/images/mkt_dp.jpeg" alt="" class="img-fluid">
+										</div>
+									</div>
+									<p class="card-text white-text mb-4" style="font-family: 'Open Sans',sans-serif;text-align:justify;text-justify:inter-word;font-size: 14px;font-weight:300;">
+										Hello!<br>
+										I, Manish Kumar Thakur, Faculty Head, Cyber Srishti, on behalf of the entire team am immense proud to announce that the Annual Technical fest of JIIT is going to be held on 20th and 21st of April, 2019.<br>
+										We were delighted with the response of Cyber Srishti 2018. Participation of students in huge numbers from various colleges across NCR inspires us to bring you with a grander version of this fest. We hope that you will enthusiastically participate this year as well. The team is putting in its heart and soul in making the event better every year.<br>This year as well, we bring to you a plethora of technical events along with other fun filled events, with amazing cash prizes and certificates.
+										<br>Sincerely,<br>
+									Manish Kumar Thakur<br>
+									Faculty-Head<br>
+									Cyber Srishti 2019
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-0 col-10 offset-1">
 							<div class="card">
 								<div class="view overlay">
 								</div>
@@ -228,31 +167,6 @@
 									<br>Sincerely,<br>
 									Atul Yashwant Singh<br>
 									Director<br>
-									Cyber Srishti 2019
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-10 offset-sm-1 col-md-4 offset-md-0 col-10 offset-1">
-							<div class="card">
-								<div class="view overlay">
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<div class="row">
-										<div class="col-9">
-											<h4 class="card-title"><a>Faculty-Head</a></h4>
-										</div>
-										<div class="col-3">
-											<img src="/images/mkt_dp.jpeg" alt="" class="img-fluid">
-										</div>
-									</div>
-									<p class="card-text white-text mb-4" style="font-family: 'Open Sans',sans-serif;text-align:justify;text-justify:inter-word;font-size: 14px;font-weight:300;">
-										Hello!<br>
-										I, Manish Kumar Thakur, Faculty Head, Cyber Srishti, on behalf of the entire team am immense proud to announce that the Annual Technical fest of JIIT is going to be held on 20th and 21st of April, 2019.<br>
-										We were delighted with the response of Cyber Srishti 2018. Participation of students in huge numbers from various colleges across NCR inspires us to bring you with a grander version of this fest. We hope that you will enthusiastically participate this year as well. The team is putting in its heart and soul in making the event better every year.<br>This year as well, we bring to you a plethora of technical events along with other fun filled events, with amazing cash prizes and certificates.
-										<br>Sincerely,<br>
-									Manish Kumar Thakur<br>
-									Faculty-Head<br>
 									Cyber Srishti 2019
 									</p>
 								</div>
@@ -396,8 +310,8 @@
 											<div class="row">
 												<div class="col-12">
 													<center>
-														<img src="/images/team/3.jpg" alt="" class="img-fluid teamimg">
-														<img src="/images/team/4.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/3.jpg" alt="" class="img-fluid teamimg mb-3">
+														<img src="/images/team/4.jpg" alt="" class="img-fluid teamimg mb-3">
 													</center>
 												</div>
 											</div>
@@ -405,8 +319,8 @@
 											<div class="row">
 												<div class="col-12">
 													<center>
-														<img src="/images/team/5.jpg" alt="" class="img-fluid teamimg">
-														<img src="/images/team/6.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/5.jpg" alt="" class="img-fluid teamimg mb-3">
+														<img src="/images/team/6.jpg" alt="" class="img-fluid teamimg mb-3">
 													</center>
 												</div>
 											</div>
@@ -414,8 +328,8 @@
 											<div class="row">
 												<div class="col-12">
 													<center>
-														<img src="/images/team/7.jpg" alt="" class="img-fluid teamimg">
-														<img src="/images/team/8.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/7.jpg" alt="" class="img-fluid teamimg mb-3">
+														<img src="/images/team/8.jpg" alt="" class="img-fluid teamimg mb-3">
 													</center>
 												</div>
 											</div>
@@ -423,8 +337,8 @@
 											<div class="row">
 												<div class="col-12">
 													<center>
-														<img src="/images/team/9.jpg" alt="" class="img-fluid teamimg">
-														<img src="/images/team/10.jpg" alt="" class="img-fluid teamimg">
+														<img src="/images/team/9.jpg" alt="" class="img-fluid teamimg mb-3">
+														<img src="/images/team/10.jpg" alt="" class="img-fluid teamimg mb-3">
 													</center>
 												</div>
 											</div>
@@ -521,7 +435,7 @@
 					</div>
 					<br>
 					<div class="row">
-						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -537,7 +451,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -553,58 +467,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<br><br>
-					<div class="row">
-						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
-							<div class="card">
-								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
-									<a>
-										<div class="mask rgba-white-slight"></div>
-									</a>
-								</div>
-								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
-									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -623,7 +486,7 @@
 					</div>
 					<br><br>
 					<div class="row">
-						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -639,7 +502,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -655,7 +518,58 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1">
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<br><br>
+					<div class="row">
+						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1 mb-3">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
+							<div class="card">
+								<div class="view overlay">
+									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<a>
+										<div class="mask rgba-white-slight"></div>
+									</a>
+								</div>
+								<div class="card-body elegant-color white-text rounded-bottom">
+									<h4 class="card-title">Event Name</h4>
+									<hr class="hr-light">
+									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
+									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
 									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
@@ -688,7 +602,43 @@
 					<br>
 					<div class="row">
 						<div class="col-12">
-							
+							<div class="container">
+								<div class="row">
+									<div class="col-8 offset-2">
+										<br><br><br>
+										<div class="card">
+											<div class="card-body elegant-color white-text rounded-bottom">
+												<form method="POST" action="/contact/">
+													<div class="row">
+														<div class="col-sm-6 col-12 mb-3">
+															<div class="md-form form-lg">
+																<input type="text" id="kname" class="form-control form-control-lg" name="kname">
+																<label for="kname">Your Name?</label>
+															</div>
+														</div>
+														<div class="col-sm-6 col-12 mb-3">
+															<div class="md-form form-lg">
+																<input type="text" id="kemail" class="form-control form-control-lg" name="kemail">
+																<label for="kemail">Your Email?</label>
+															</div>
+														</div>
+													</div>
+													<div class="row">
+														<div class="col-12">
+															<div class="md-form">
+																<textarea id="kmsg" class="form-control md-textarea" length="2000" rows="1" name="kmsg"></textarea>
+																<label for="kmsg">Your Message?</label>
+															</div>
+														</div>
+													</div>
+													<br>
+													<button type="submit" class="btn btn-elegant">Submit<i class="fas fa-angle-double-right"></i></button>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					<br><br>
@@ -701,11 +651,12 @@
 	<script src="/javascripts/bootstrap.min.js"></script>
 	<script src="/javascripts/mdb.min.js"></script>
 	<script>
+	var activeWindow = '.home';
 		function toggleMenu(){
 			if($('#navMenuButton').css('display') == 'block'){
 				if($('#navMenu').css('display') == 'block'){
 					$('#navMenu').css('display', 'none');
-					$(".main-page").show();
+					$(activeWindow).show();
 				}
 				else if($('#navMenu').css('display') == 'none'){
 					$('#navMenu').css('display', 'block');
@@ -844,31 +795,36 @@
 				return true;
 			}
 		});
-		modal.setContent('<br><h1>Coming Soon!</h1><br><h5>Press esc to buzz this off your sight!</h5>');
+		modal.setContent('<br><h1>Coming Soon!</h1><br><h5 class="mobile">Press esc to buzz this off your sight!</h5>');
 		function reShow(){
 			toggleMenu();
 			$(".main-page").hide();
 		}
 		function gallery(){
+			activeWindow = '.gallery';
 			reShow();
 			$(".gallery").show();
 			$("#gal2018").collapse('show');
 		}
 		function about(){
+			activeWindow = '.about';
 			reShow();
 			$(".about").show();
 			//new WOW().init();
 		}
 		function contact(){
+			activeWindow = '.contact';
 			reShow();
 			$(".contact").show();
 		}
 		function events(){
+			activeWindow = '.events';
 			reShow();
 			$(".events").show();
 			modal.open();
 		}
 		function home(){
+			activeWindow = '.home';
 			reShow();
 			$(".home").show();
 		}
