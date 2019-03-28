@@ -1,11 +1,11 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "helloworld",
-  "short_name": "helloworld",
-  "version": "com.phonegap.helloworld",
+  "name": "Cybersrishti-2019",
+  "short_name": "Cybersrishti-2019",
+  "version": "tech.cybersrishti.cs2019",
   "description": "Hello World sample application that responds to the deviceready event.",
-  "author": "PhoneGap Team",
+  "author": "NGUdbhav",
   "icons": [],
   "start_url": "index.html"
 }
