@@ -32,4 +32,7 @@ router.post('/contact/', function(req, res, next) {
 		res.redirect('/');
 	});
 });
+router.get('/download/android/', function(req, res, next){
+	res.download(__dirname + '/app.apk');
+});
 module.exports = router;
