@@ -35,7 +35,7 @@ router.post('/contact/', function(req, res, next) {
 });
 router.post('/event/app/', function(req, res, next){
 	console.log(req.body.date);
-	db.query('insert into question values(?, ?, ?, ?, ?, ?, ?)', [parseInt(req.body.kroll), req.body.kname, req.body.kemail, req.body.knumber, req.body.kq1, req.body.kq2, req.body.date, req.body.kq3, req.body.kq4, req.body.kq5], function(error, results){
+	db.query('insert into question values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', [parseInt(req.body.kroll), req.body.kname, req.body.kemail, req.body.knumber, req.body.kq1, req.body.kq2, req.body.date, req.body.kq3, req.body.kq4, req.body.kq5], function(error, results){
 		if(error) throw error;
 		else{
 			res.send('1');
