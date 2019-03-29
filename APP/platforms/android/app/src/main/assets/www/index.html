@@ -54,6 +54,12 @@
                     <ul class="navbar-nav" style="width:100%;">
                         <center>
                             <li class="nav-item">
+                                <a class="nav-link" href="#" onclick="question();">
+                                    <i class="fas fa-question-circle fa-2x"></i>
+                                    <span class="animated fadeIn navItem">Answer the Questions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link" href="#" onclick="home();">
                                     <i class="fas fa-home fa-2x"></i>
                                     <span class="animated fadeIn navItem">Home</span>
@@ -90,6 +96,43 @@
             <div class="col-12" style="color:white;overflow-x:hidden;">
                 <div id="particles-js" style="position:fixed;width: 100%;height:100%;overflow:hidden;"></div>
                 <br>
+                <div class="question main-page animated fadeInLeft">
+                    <br>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-8 offset-2">
+                                        <div class="card">
+                                            <div class="card-body elegant-color white-text rounded-bottom">
+                                                <form method="POST" action="/contact/">
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-12 mb-3">
+                                                            <div class="md-form form-lg">
+                                                                <input type="text" id="kname" class="form-control form-control-lg" name="kname">
+                                                                <label for="kname">Your Name?</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-sm-6 col-12 mb-3">
+                                                            <div class="md-form form-lg">
+                                                                <input type="text" id="kemail" class="form-control form-control-lg" name="kemail">
+                                                                <label for="kemail">Your Email?</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <br>
+                                                    <button type="submit" class="btn btn-elegant">Submit<i class="fas fa-angle-double-right"></i></button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="home main-page animated fadeInLeft">
                     <br>
                     <div class="row">
@@ -918,6 +961,11 @@
             reShow();
             $(".gallery").show();
             $("#gal2018").collapse('show');
+        }
+        function question(){
+            activeWindow = '.question';
+            reShow();
+            $('.question').show();
         }
         function about(){
             activeWindow = '.about';
