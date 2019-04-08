@@ -487,48 +487,48 @@
 						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/tensor.png">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title">Tensor</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date: 21st April 2019<br>Time: 10AM onwards<br>Venue: G-12, JIIT</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('tensor');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/game.jpg">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title">Game-A-Thon</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date: 20th April 2019<br>Time: 10AM to 5PM<br>Venue: CL-2, JIIT</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('gamethon');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/gd2.jpg">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title">Game Exhibition</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date: 21st April 2019<br>Time: 10AM to 3PM<br>Venue: Auditorium Foyer, JIIT</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('gd2');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
@@ -823,6 +823,27 @@
 				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
 				modal1.open();
 			}
+			if(e == 'tensor'){
+				title='"Tensor" - A Scientific Poster Presentation Competition';
+				desc = '"The only sure weapon against bad ideas is better ideas." <br>- Alfred Whitney Griswold <br><br>Get ready to do some research and put together your best ideas as we bring you <strong>Tensor - A Scientific Poster Presentation Competition</strong> embodying the theme IT for Sustainability. <br><br>To stand out, your poster should convey your key findings and be visually appealing to grab the attention of the jury in any of the following topics: <br><ul><li>Fibre Technology and Optics</li><li>Quantum Computing</li><li>Energy Storage</li><li>IoT and Wireless Communication</li></ul> <br><br> Basic Guidelines:<br><ul><li>The poster can be hand made or digital</li><li>Each team can have at most two participants</li><li>Poster Size: 36-inch tall x 48 inches wide</li><li>Registration on first come first basis. Limited slots.</li></ul> <br><br> Register here and get a chance to win cash prizes worth Rs10000: <a href = "https://forms.gle/VjL1cVyf4aZtRZcs8" target = "_blank">Register</a>';
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+
+			if(e == 'gd2'){
+				title='Game Exhibition';
+				desc = 'We are proud to announce that the talented game developers have put together a variety of games varying in genre and platforms for all of you to enjoy at The Game Exhibition!<br> What\'s more? There\'s still time and you yourself can finish up a project and submit it to be judged and win cash prizes worth Rs. 5000.<br>Even if you are not into game development, do drop by at to try out games made by your friends! <br><br>Register here: <a href = "https://forms.gle/DNCedoxhpnGakUQp8" target = "_blank">Register</a>';
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+
+			if(e == 'gamethon'){
+				title='Game-A-Thon';
+				desc = 'Prepare your assets and brush up your game developement skills as we bring to you "Game-A-Thon", a game development hackathon where the only limit is your imagination, and well, the topic related to which you have to make the game! <br><br>The rules are as follows: <br><ul><li>The participants will be given 7 hours to complete their game from start to finish.</li><li>The final build/executable of the game should either be an .exe or .apk</li><li>Web games are not allowed</li><li>AR/VR games are allowed given that the participant brings the required platform along.</li><li>Any game engine/tool is allowed.</li><li>The judging criteria will be aesthetics, game flow, simplicity and understanding and innovation.</li><li>Decision of the judges would be final and binding.</li><li>Everyone must carry their college ID cards.</li><li>Team size allowed: 2 to 4</li> <br><br>NOTE: Theme will be provided on the spot.<br>And will be related to Cyber Srishti 2019\'s theme- IT FOR SUSTAINABILITY<br><br>Register Now: <a href = " https://forms.gle/SL2S9yEMdmxd2ydS8" target = "_blank">Register</a>';
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+
 		}
 		function reShow(){
 			toggleMenu();
