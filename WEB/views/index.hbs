@@ -53,12 +53,6 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#" onclick="gallery();">
-									<i class="fas fa-images fa-2x"></i>
-									<span class="animated fadeIn navItem">Gallery</span>
-								</a>
-							</li>
-							<li class="nav-item">
 								<a class="nav-link" href="#" onclick="contact();">
 									<i class="fas fa-comment fa-2x"></i>
 									<span class="animated fadeIn navItem">Contact</span>
@@ -74,7 +68,7 @@
 					</ul>
 				</nav>
 			</div>
-			<div class="col-12" style="color:white;overflow-x:hidden;">
+			<div class="col-12" style="color:white;">
 				<div id="particles-js" style="position:fixed;width: 100%;height:100%;overflow:hidden;"></div>
 				<br>
 				<div class="home main-page animated fadeInLeft">
@@ -306,6 +300,14 @@
 											<div class="row">
 												<div class="col-12">
 													<center>
+														<img src="/images/team/11.jpg" alt="" class="img-fluid teamimg">
+													</center>
+												</div>
+											</div>
+											<br><br>
+											<div class="row">
+												<div class="col-12">
+													<center>
 														<img src="/images/team/3.jpg" alt="" class="img-fluid teamimg mb-3">
 														<img src="/images/team/4.jpg" alt="" class="img-fluid teamimg mb-3">
 													</center>
@@ -434,48 +436,48 @@
 						<div class="col-sm-10 offset-sm-1 col-md-3 offset-md-2 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/parola.jpg" alt="Card image cap">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title"> "Reflect"</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date - 21st April 2019<br>Time – 10 A.M<br>Venue - Jaypee Institute of Information Technology Sector-62 Noida</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('reflect');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/dsc.jpg" alt="Card image cap">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title">Website Designing Competiton</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date: 21st April'19 (DAY 2)<br>Venue: JBS AUDITORIUM<br>Time: 10am to 3pm</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('dsc');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
 						<div class="col-sm-10 col-md-3 offset-sm-1 offset-md-0 col-10 offset-1 mb-3">
 							<div class="card">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg" alt="Card image cap">
+									<img class="card-img-top" src="/images/events/ucr.jpg" alt="Card image cap">
 									<a>
 										<div class="mask rgba-white-slight"></div>
 									</a>
 								</div>
 								<div class="card-body elegant-color white-text rounded-bottom">
-									<h4 class="card-title">Event Name</h4>
+									<h4 class="card-title">Project Exhibition</h4>
 									<hr class="hr-light">
-									<p class="card-text white-text mb-4">Description of an event coming very soon!</p>
-									<a href="#" class="white-text d-flex justify-content-end"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
+									<p class="card-text white-text mb-4">Date: 20th April 2019<br>Time: 9AM onwards<br>Venue: JBS Atrium</p>
+									<a href="#" class="white-text d-flex justify-content-end" onclick="showDetails('ucr');"><h5>Read more <i class="fas fa-angle-double-right"></i></h5></a>
 								</div>
 							</div>
 						</div>
@@ -665,6 +667,7 @@
 			var map = new google.maps.Map(document.getElementById('locate'), {center: {lat: 28.630044, lng: 77.372082},
 				zoom: 18,
 				fullscreenControl: false,
+				gestureHandling: 'cooperative',
 				styles: [
 					{elementType: 'geometry', stylers: [{color: '#242f3e'}]},
 					{elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -791,6 +794,36 @@
 			}
 		});
 		modal.setContent('<br><h1>Coming Soon!</h1><br><h5 class="mobile">Press esc to buzz this off your sight!</h5>');
+		var modal1 = new tingle.modal({
+			footer:false,
+			stickyFooter:false,
+			closeMethods:['button', 'escape', 'overlay'],
+			beforeClose: function() {
+				return true;
+			}
+		});
+		var title = '';
+		var desc = '';
+		function showDetails(e){
+			if(e == 'ucr'){
+				title="Project Exhibition";
+				desc='"The harder you work for something, the greater you\'ll feel when you finally achieve it."<br>The μCR hub is going to organise project exhibition in the Cybersrishti-2019. It is a chance for all of you to showcase your talent and technical skills you have gained so far and win exciting cash prizes while you are at it. So come forward with all the zeal and enthusiasm to participate in the exhibition.<br><br>Event Details:<br><br>Date: 20th April 2019<br>Time: 9AM onwards<br>Venue: JBS Atrium<br><br>To register for the event use the following link:<br><a href="https://forms.gle/w4cDv7ZQQBTAopfG6" target="_blank">Register</a>'
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+			if(e == 'dsc'){
+				title="Website Designing Competition";
+				desc = '"People don\'t care what you say, they care what you build"- Mark Zukerberg<br>Website Designing Competiton will be a test of your web development skills. So this CyberSrishti, participate in \'Web Designing Competition\' and bring out the inner developer and that creative mind in you and win amazing cash prizes upto 15K.<br><br>Event Details:<br><br>Date: 21st April 2019<br>Time: 10AM to 3PM<br>Venue: JBS AUDITORIUM<br><br>To register for the event use the following link:<br><a href="https://forms.gle/c4CGXzrQ3aPFYmQa8" target="_blank">Register</a>';
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+			if(e == 'reflect'){
+				title='"Reflect" - The Socio-Technical Turncoat Debate.';
+				desc = '"7 billion people, 14 billion faces."<br>Have you ever played the game of duality? This time at Cyber Srishti 2019, We invite you all to "Reflect" - The Socio-Technical Turncoat Debate.<br>The motion of the turncoat will be announced 48 hours prior to the event. (Theme - “IT and Sustainability” )<br><br>Event Details:<br><br>Date: 21st April 2019<br>Time: 10AM<br>Venue: JAYPEE INSTITUTE OF INFORMATION TECHNOLOGY<br><br>To register for the event use the following link:<br><a href="https://forms.gle/bonTaMSPQZk1Ev956" target="_blank">Register</a><br><br>Rules:<br><br><ul><li>This event will consist of Individual Participationonly.</li><li>The event will be bilingual (Hindi and English). </li><li>Speaking Time for each speaker will be 4 minutes (1.5+1.5+1)</li><li>Only two participants per college are allowed.</li><li>The speakers will start speaking for the motion and will change their stance at the end of each tap. </li><li>Marks will be deducted for exceeding the time limit.</li><li>The slots will be provided on first come, first served basis.</li><li>Decision of the judges would be final and binding.</li><li>Everyone must carry their college ID cards.</li></ul><br><br>Come and participate to grab cash prizes worth Rs 15,000';
+				modal1.setContent('<h1><center>'+title+'</center></h1><br><br>'+desc);
+				modal1.open();
+			}
+		}
 		function reShow(){
 			toggleMenu();
 			$(".main-page").hide();
@@ -816,7 +849,7 @@
 			activeWindow = '.events';
 			reShow();
 			$(".events").show();
-			modal.open();
+			//modal.open();
 		}
 		function home(){
 			activeWindow = '.home';
