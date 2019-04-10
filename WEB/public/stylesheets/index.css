@@ -1,10 +1,13 @@
 *{
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+*::-webkit-scrollbar{
+	z-index: 100 !important;
+}
 html, body, .container{
 			height: 100%;
 			font-family: 'Audiowide', cursive;
-		}
+}
 		.nav-link{
 			color: white;
 		}
@@ -82,4 +85,4 @@ html, body, .container{
 			.mobile{
 				display: none;
 			}
-		}
+}
